@@ -1,19 +1,23 @@
 // No cambies los nombres de las funciones.
 
 function obtenerMayor(x, y) {
-  // "x" e "y" son números enteros (int).
-  // Devuelve el número más grande
-  // Si son iguales, devuelve cualquiera de los dos
-  // Tu código:
+  if(x>y) return x;
+    else return y;
+    if(x===y) return x;
 }
 
 function mayoriaDeEdad(edad) {
+  if(edad>=18) return console.log('Allowed');
+  else return console.log('Not allowed');
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
 }
   
 function conection(status) {
+  if(status ===1) {return console.log('Online')}
+  else if(status===2){return console.log('Away')}
+  else if (status !=1 && status !=2) return console.log('Offline');
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
   //Cuando el estado es igual a 1, el usuario está "Online"
   //Cuando el estado es igual a 2, el usuario está "Away"
@@ -28,6 +32,21 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
+  var idioma1 = idioma.trim();
+ 
+  switch (idioma1){
+    case "aleman":
+      console.log("Guten Tag");
+      break;
+    case "mandarin":
+      console.log("Ni Hao");
+      break;
+    case "ingles":
+      console.log("Hello!");
+      break;
+    default:
+      console.log("Hola!");
+  }
 }
 
 function colors(color) {
@@ -38,18 +57,42 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  var color1 = color.trim();
+ 
+    switch (color1){
+      case "blue":
+        console.log("This is blue");
+        break;
+      case "red":
+        console.log("This is red");
+        break;
+      case "green":
+        console.log("This is green");
+        break;
+      case "orange":
+        console.log("This is orange");
+        break;
+      default:
+        console.log("Color not found");
+    }
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  if(numero === 10 || numero ===5){
+    return console.log(true);
+  }
+  else return console.log(false);
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero<50 && numero>20) return console.log(true)
+  else return console.log(false);
 }
 
 function esEntero(numero) {
