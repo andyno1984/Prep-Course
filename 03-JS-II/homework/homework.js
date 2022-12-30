@@ -168,7 +168,7 @@ function tablaDelSeis(){
   for(let i=0; i<=60; i++){
     arreglo[i] = 6*i;
   }
-  for(let i=0; i<61; i++){
+  for(let i=0; i<arreglo.length; i++){
     console.log(arreglo[i]);
   }
 }
